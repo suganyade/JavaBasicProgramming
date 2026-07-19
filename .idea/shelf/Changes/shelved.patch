@@ -1,0 +1,639 @@
+Index: src/AddBinary.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/AddBinary.java b/src/AddBinary.java
+new file mode 100644
+--- /dev/null	(date 1784218000594)
++++ b/src/AddBinary.java	(date 1784218000594)
+@@ -0,0 +1,36 @@
++import java.util.Scanner;
++
++public class AddBinary {
++    public static void main(String[] args) {
++        String a = "1010";
++        String b = "1101";
++
++        System.out.println("Binary 1 : " + a);
++        System.out.println("Binary 2 : " + b);
++
++        String answer = binary(a, b);
++
++        System.out.println("Sum      : " + answer);
++
++    }
++    public static String binary(String a ,String b){
++        StringBuilder str = new StringBuilder();
++         int i= a.length()-1;
++         int j= b.length()-1;
++         int carry=0;
++         while(i>=0||j>=0||carry!=0) {
++             int sum = carry;
++             if (i >= 0) {
++                 sum = sum + a.charAt(i) - '0';
++                 i--;
++             }
++             if (j >= 0) {
++                 sum = sum + b.charAt(j) - '0';
++                 j--;
++             }
++             str.append(sum % 2);
++             carry = sum / 2;
++         }
++         return str.reverse().toString();
++    }
++}
+Index: src/AddcomplexNum.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/AddcomplexNum.java b/src/AddcomplexNum.java
+new file mode 100644
+--- /dev/null	(date 1784244936272)
++++ b/src/AddcomplexNum.java	(date 1784244936272)
+@@ -0,0 +1,16 @@
++import java.util.Scanner;
++
++public class AddcomplexNum {
++    public static void main(String[] args) {
++        Scanner sc  = new Scanner(System.in);
++        int real1= sc.nextInt();
++        int image1=sc.nextInt();
++        int real2=sc.nextInt();
++        int image3=sc.nextInt();
++
++        int real = real1+real2;
++        int image = image1+image3;
++
++        System.out.println(real+"+"+image + " "+"i");
++    }
++}
+Index: src/EvenOrodd.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/EvenOrodd.java b/src/EvenOrodd.java
+new file mode 100644
+--- /dev/null	(date 1784245346930)
++++ b/src/EvenOrodd.java	(date 1784245346930)
+@@ -0,0 +1,13 @@
++import java.util.Scanner;
++public class EvenOrodd {
++    public static void main(String[] args) {
++        Scanner sc=  new Scanner(System.in);
++        int n= sc.nextInt();
++        if(n%2==0){
++            System.out.println("It's the even number");
++        }
++        else{
++            System.out.println("It's the odd number");
++        }
++    }
++}
+Index: src/LargestNumber.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/LargestNumber.java b/src/LargestNumber.java
+new file mode 100644
+--- /dev/null	(date 1784078212280)
++++ b/src/LargestNumber.java	(date 1784078212280)
+@@ -0,0 +1,20 @@
++import java.util.Scanner;
++
++public class LargestNumber {
++    public static void main(String[] args) {
++        Scanner sc = new Scanner(System.in);
++        int a =sc.nextInt();
++        int b = sc.nextInt();
++        int c= sc.nextInt();
++        int max=a;
++        if(max<b){
++            max=b;
++        }
++      if(max<c){
++            max=c;
++        }
++
++        System.out.println(max);
++    }
++
++}
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+new file mode 100644
+--- /dev/null	(date 1784077463244)
++++ b/src/Main.java	(date 1784077463244)
+@@ -0,0 +1,15 @@
++//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
++// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
++public class Main {
++    public static void main(String[] args) {
++        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
++        // to see how IntelliJ IDEA suggests fixing it.
++        System.out.printf("Hello and welcome!");
++
++        for (int i = 1; i <= 5; i++) {
++            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
++            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
++            System.out.println("i = " + i);
++        }
++    }
++}
+\ No newline at end of file
+Index: src/LCM.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/LCM.java b/src/LCM.java
+new file mode 100644
+--- /dev/null	(date 1784246293619)
++++ b/src/LCM.java	(date 1784246293619)
+@@ -0,0 +1,18 @@
++import java.util.Scanner;
++
++public class LCM {
++    public static void main(String[] args) {
++        Scanner sc = new Scanner(System.in);
++        int a = sc.nextInt();
++        int b = sc.nextInt();
++        int max = (a > b) ? a : b;
++        while (true) {
++            if (max % a == 0 && max % b == 0) {
++                System.out.println("Lcm is" + "" + max);
++                break;
++            }
++            max++;
++        }
++    }
++
++}
+Index: src/CaseCheck.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/CaseCheck.java b/src/CaseCheck.java
+new file mode 100644
+--- /dev/null	(date 1784131222478)
++++ b/src/CaseCheck.java	(date 1784131222478)
+@@ -0,0 +1,19 @@
++import java.util.Scanner;
++
++public class CaseCheck {
++    public static void main(String[] args) {
++        Scanner sc= new Scanner(System.in);
++        System.out.println("Enter the character");
++        char ch = sc.next().charAt(0);
++        if(ch>='A' && ch<='Z')
++        {
++            System.out.println("UpperCase");
++        }
++        else if(ch>='a'&& ch<='z'){
++            System.out.println("LowerCase");
++        }
++        else{
++            System.out.println("Not an alphabet");
++        }
++    }
++}
+Index: src/fibonaciEven.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/fibonaciEven.java b/src/fibonaciEven.java
+new file mode 100644
+--- /dev/null	(date 1784343416418)
++++ b/src/fibonaciEven.java	(date 1784343416418)
+@@ -0,0 +1,22 @@
++import java.util.Scanner;
++
++public class fibonaciEven {
++    public static void main(String[] args) {
++        Scanner sc = new Scanner(System.in);
++        int n=sc.nextInt();
++        int first=0;
++        int second=1;
++        int sum=0;
++        for(int i=0;i<2*n;i++){
++            if(i%2==0){
++                sum=sum+first;
++            }
++            int next=first+second;
++            first=second;
++            second=next;
++        }
++        System.out.println(sum);
++
++
++    }
++}
+Index: src/SimpleInterest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/SimpleInterest.java b/src/SimpleInterest.java
+new file mode 100644
+--- /dev/null	(date 1784344192852)
++++ b/src/SimpleInterest.java	(date 1784344192852)
+@@ -0,0 +1,14 @@
++import java.util.Scanner;
++
++public class SimpleInterest {
++    public static void main(String[] args) {
++        Scanner sc = new Scanner(System.in);
++        Float P=sc.nextFloat();
++        Float N =sc.nextFloat();
++        Float r = sc.nextFloat();
++        Float si =(P*N*r)/100;
++        System.out.println(si);
++        sc.close();
++
++    }
++}
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+--- /dev/null	(date 1784077463234)
++++ b/.gitignore	(date 1784077463234)
+@@ -0,0 +1,29 @@
++### IntelliJ IDEA ###
++out/
++!**/src/main/**/out/
++!**/src/test/**/out/
++
++### Eclipse ###
++.apt_generated
++.classpath
++.factorypath
++.project
++.settings
++.springBeans
++.sts4-cache
++bin/
++!**/src/main/**/bin/
++!**/src/test/**/bin/
++
++### NetBeans ###
++/nbproject/private/
++/nbbuild/
++/dist/
++/nbdist/
++/.nb-gradle/
++
++### VS Code ###
++.vscode/
++
++### Mac OS ###
++.DS_Store
+\ No newline at end of file
+Index: JavaLearning.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/JavaLearning.iml b/JavaLearning.iml
+new file mode 100644
+--- /dev/null	(date 1784077466452)
++++ b/JavaLearning.iml	(date 1784077466452)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: src/perimeterOfTriangle.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/perimeterOfTriangle.java b/src/perimeterOfTriangle.java
+new file mode 100644
+--- /dev/null	(date 1784344467600)
++++ b/src/perimeterOfTriangle.java	(date 1784344467600)
+@@ -0,0 +1,10 @@
++public class perimeterOfTriangle {
++    public static void main(String[] args) {
++        int length =100;
++        int breadth =90;
++        //formula of perimeter 2*(l+b);
++        int perimeter =2*(length+breadth);
++        System.out.println(perimeter);
++    }
++
++}
+Index: src/CompoundInterest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/CompoundInterest.java b/src/CompoundInterest.java
+new file mode 100644
+--- /dev/null	(date 1784345606091)
++++ b/src/CompoundInterest.java	(date 1784345606091)
+@@ -0,0 +1,14 @@
++import java.util.Scanner;
++
++public class CompoundInterest {
++    public static void main(String[] args) {
++        //compound Interest ==> (p(1+r/100)^t;
++        Scanner sc = new Scanner(System.in);
++        double p=sc.nextDouble();
++        double r = sc.nextDouble();
++        double t = sc.nextDouble();
++
++        double ci =p*(Math.pow((1+r/100),t));
++        System.out.println(ci);
++    }
++}
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1784077466497)
++++ b/.idea/modules.xml	(date 1784077466497)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/JavaLearning.iml" filepath="$PROJECT_DIR$/JavaLearning.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: src/GCD.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/GCD.java b/src/GCD.java
+new file mode 100644
+--- /dev/null	(date 1784249844862)
++++ b/src/GCD.java	(date 1784249844862)
+@@ -0,0 +1,16 @@
++import java.util.Scanner;
++
++public class GCD {
++    public static void main(String[] args) {
++        Scanner sc = new Scanner(System.in);
++        int a= sc.nextInt();
++        int b= sc.nextInt();
++        while(b!=0){
++            int temp=b;
++            b=a%b;
++            a=temp;
++        }
++        System.out.println("The greatest Common Number is" + a);
++        sc.close();
++    }
++}
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1784077472803)
++++ b/.idea/.gitignore	(date 1784077472803)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: src/PrimeNum.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/PrimeNum.java b/src/PrimeNum.java
+new file mode 100644
+--- /dev/null	(date 1784250833293)
++++ b/src/PrimeNum.java	(date 1784250833293)
+@@ -0,0 +1,22 @@
++import java.util.Scanner;
++
++public class PrimeNum {
++    public static void main(String[] args) {
++        Scanner sc =new Scanner(System.in);
++        int n = sc.nextInt();
++        for(int i =0;i<=n;i++){
++            Boolean isprime =true;
++
++         for(int j=2;j<=i/2;j++){
++             if(i%j==0){
++                 isprime=false;
++                 break;
++             }
++         }
++            if(isprime){
++                System.out.println(i+" ");
++            }
++        }
++sc.close();
++    }
++}
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1784077466518)
++++ b/.idea/misc.xml	(date 1784077466518)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="23" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: src/leapyear.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/leapyear.java b/src/leapyear.java
+new file mode 100644
+--- /dev/null	(date 1784305050699)
++++ b/src/leapyear.java	(date 1784305050699)
+@@ -0,0 +1,20 @@
++import java.util.Scanner;
++
++public class leapyear {
++    public static void main(String[] args) {
++        //divisible by 400||
++        //divisible by 100 & 4
++        Scanner sc = new Scanner(System.in);
++        int yr = sc.nextInt();
++
++
++        if((yr%400==0)||(yr%4==0 && yr%100!=0)){
++            System.out.println("This is the leap year" + yr);
++        }
++        else{
++            System.out.println("Not an leap year");
++        }
++        sc.close();
++        }
++    }
++
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1784077473485)
++++ b/.idea/vcs.xml	(date 1784077473485)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: src/ArmstrongNum.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ArmstrongNum.java b/src/ArmstrongNum.java
+new file mode 100644
+--- /dev/null	(date 1784305880756)
++++ b/src/ArmstrongNum.java	(date 1784305880756)
+@@ -0,0 +1,23 @@
++import java.util.Scanner;
++
++public class ArmstrongNum {
++    public static void main(String[] args) {
++        Scanner sc = new Scanner(System.in);
++        int num= sc.nextInt();
++        int  originalNum =num;
++        int sum=0;
++        while(num!=0){
++
++            int temp= num%10;
++            sum=sum+(temp*temp*temp);
++            num=num/10;
++
++        }
++        if (sum == originalNum) {
++            System.out.println("This is an armstong number");
++        }else{
++            System.out.println("Not an armbstrong");
++        }
++        sc.close();
++    }
++}
+Index: src/NeonNumber.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/NeonNumber.java b/src/NeonNumber.java
+new file mode 100644
+--- /dev/null	(date 1784339270775)
++++ b/src/NeonNumber.java	(date 1784339270775)
+@@ -0,0 +1,21 @@
++import java.util.Scanner;
++
++public class NeonNumber {
++    public static void main(String[] args) {
++        Scanner sc = new Scanner(System.in);
++        int n =sc.nextInt();
++        int square =n*n;
++        int sum=0;
++        while(square!=0){
++            sum=sum+square%10;
++            square=square/10;
++        }
++        if(n==sum){
++            System.out.println("This is the neon number");
++        }
++        else{
++            System.out.println("Not a neon number");
++        }
++        sc.close();
++    }
++}
+Index: src/VowelOrConsonant.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/VowelOrConsonant.java b/src/VowelOrConsonant.java
+new file mode 100644
+--- /dev/null	(date 1784339679577)
++++ b/src/VowelOrConsonant.java	(date 1784339679577)
+@@ -0,0 +1,14 @@
++import  java.util.Scanner;
++public class VowelOrConsonant {
++    public static void main(String[] args) {
++        Scanner sc= new Scanner(System.in);
++        char ch =sc.next().charAt(0);
++        if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
++            System.out.println("The character is vowel"+ch);
++        }
++        else{
++            System.out.println("it's consonant"+ch);
++        }
++        sc.close();
++    }
++}
+Index: src/Factorial.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Factorial.java b/src/Factorial.java
+new file mode 100644
+--- /dev/null	(date 1784340849270)
++++ b/src/Factorial.java	(date 1784340849270)
+@@ -0,0 +1,17 @@
++import java.util.Scanner;
++
++public class Factorial {
++    public static void main(String[] args) {
++        Scanner sc = new Scanner(System.in);
++        int n= sc.nextInt();
++        int ans = fact(n);
++        System.out.println(ans);
++
++    }
++    public  static int fact(int n ){
++        if(n==0){
++            return 1;
++        }
++        return n*fact(n-1);
++    }
++}
